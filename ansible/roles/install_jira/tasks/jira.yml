@@ -1,0 +1,14 @@
+---
+- name: Download Package
+  get_url:
+    dest: "/tmp"
+    url: "{{ jira_install_url }}"
+  register: jira_pack_download
+
+- name: Change file ownership
+  file:
+    path: "/tmp/{{ jira_pack }}"
+    mode: 'a+x'
+
+- name: Execute Install Jira
+  script: "/tmp/{{ jira_pack }}"

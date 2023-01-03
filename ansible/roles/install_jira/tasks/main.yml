@@ -1,0 +1,5 @@
+---
+- name: Include Tasks Jira Install
+  include: jira.yml
+  tags:
+    - install

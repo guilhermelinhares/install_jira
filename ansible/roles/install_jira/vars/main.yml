@@ -1,0 +1,4 @@
+---
+# vars file for install_jira
+jira_pack: atlassian-jira-5.2.5-x64.bin
+jira_install_url: https://www.atlassian.com/software/jira/downloads/binary/{{ jira_pack }}
